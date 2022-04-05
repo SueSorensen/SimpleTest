@@ -1,0 +1,36 @@
+.view-1-container {
+    height: 100%;
+    align-items: stretch;
+}
+.group {
+    position: relative;
+    padding: 32px;
+    min-width: 50px;
+    min-height: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: stretch;
+}
+.image {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.h5 {
+    margin: 0 0 16px;
+    height: max-content;
+    min-width: min-content;
+}
+.text {
+    height: max-content;
+    min-width: min-content;
+}
+.row {
+    display: flex;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
