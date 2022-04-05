@@ -2,7 +2,25 @@
 @inject NavigationManager NavigationManager
 @inject HttpClient HttpClient
 
-<div class="view-3-container row"></div>
+<div class="view-3-container row">
+    <IgbDataGrid DataSource="cesiumAssets1ApiAsset" AutoGenerateColumns="false" Density="ControlDisplayDensity.Cosy" SelectionMode="GridSelectionMode.None" Width="100%" Height="50%" DefaultColumnMinWidth="136" class="grid" view-3-scope>
+        <IgbTextColumn HeaderText="name" Field="Name" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbTextColumn HeaderText="url" Field="Url" IsFilteringEnabled="true"></IgbTextColumn>
+        <IgbNumericColumn HeaderText="x" Field="X" IsFilteringEnabled="true"></IgbNumericColumn>
+        <IgbNumericColumn HeaderText="y" Field="Y" IsFilteringEnabled="true"></IgbNumericColumn>
+        <IgbNumericColumn HeaderText="z" Field="Z" IsFilteringEnabled="true"></IgbNumericColumn>
+        <IgbNumericColumn HeaderText="rx" Field="Rx" IsFilteringEnabled="true"></IgbNumericColumn>
+        <IgbNumericColumn HeaderText="ry" Field="Ry" IsFilteringEnabled="true"></IgbNumericColumn>
+        <IgbNumericColumn HeaderText="rz" Field="Rz" IsFilteringEnabled="true"></IgbNumericColumn>
+        <IgbTextColumn HeaderText="status" Field="Status" IsFilteringEnabled="true"></IgbTextColumn>
+    </IgbDataGrid>
+</div>
 
 @code {
+    private CesiumAssets1.ApiAssetType[] cesiumAssets1ApiAsset = Array.Empty<CesiumAssets1.ApiAssetType>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        cesiumAssets1ApiAsset = await HttpClient.GetFromJsonAsync<CesiumAssets1.ApiAssetType[]>("https://ocalhost:7074/api/Asset") ?? cesiumAssets1ApiAsset;
+    }
 }
