@@ -1,0 +1,44 @@
+.group {
+    height: 50%;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    align-items: stretch;
+}
+.group_1 {
+    justify-content: space-evenly;
+    margin: 10px;
+    height: 100%;
+    width: 50%;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    align-items: stretch;
+}
+.grid-container {
+    height: 100%;
+    align-items: stretch;
+}
+.group_2 {
+    width: 50%;
+    position: relative;
+    min-width: 50px;
+    min-height: 50px;
+    align-items: stretch;
+}
+.grid {
+    min-width: 50px;
+    min-height: 50px;
+    flex-shrink: 0;
+}
+.user-input {
+    height: max-content;
+    min-width: min-content;
+}
+.row {
+    display: flex;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}

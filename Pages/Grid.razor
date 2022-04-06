@@ -1,9 +1,9 @@
-@page "/view-3"
+@page "/"
 @inject NavigationManager NavigationManager
 @inject HttpClient HttpClient
 
-<div class="view-3-container row">
-    <IgbDataGrid DataSource="cesiumAssets1ApiAsset" AutoGenerateColumns="false" Density="ControlDisplayDensity.Cosy" SelectionMode="GridSelectionMode.None" Width="100%" Height="50%" DefaultColumnMinWidth="136" class="grid" view-3-scope>
+<div class="grid-container column">
+    <IgbDataGrid DataSource="cesiumAssets1ApiAsset" AutoGenerateColumns="false" Density="ControlDisplayDensity.Cosy" SelectionMode="GridSelectionMode.None" Width="100%" Height="50%" DefaultColumnMinWidth="136" class="grid" grid-scope>
         <IgbTextColumn HeaderText="name" Field="Name" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbTextColumn HeaderText="url" Field="Url" IsFilteringEnabled="true"></IgbTextColumn>
         <IgbNumericColumn HeaderText="x" Field="X" IsFilteringEnabled="true"></IgbNumericColumn>
@@ -14,6 +14,15 @@
         <IgbNumericColumn HeaderText="rz" Field="Rz" IsFilteringEnabled="true"></IgbNumericColumn>
         <IgbTextColumn HeaderText="status" Field="Status" IsFilteringEnabled="true"></IgbTextColumn>
     </IgbDataGrid>
+    <div class="group row">
+        <div class="group_1 column">
+            <IgbInput DisplayType="InputType.Text" Label="Name" Required="true" Outlined="false" class="user-input" grid-scope></IgbInput>
+            <IgbInput DisplayType="InputType.Text" Label="URL" Outlined="true" class="user-input" grid-scope></IgbInput>
+            <IgbInput DisplayType="InputType.Text" Label="X" Outlined="true" class="user-input" grid-scope></IgbInput>
+            <span class="user-input">Select not yet available in Blazor</span>
+        </div>
+        <div class="group_2 column"></div>
+    </div>
 </div>
 
 @code {

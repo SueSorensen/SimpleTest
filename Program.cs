@@ -21,5 +21,7 @@ void RegisterIgniteUI(IServiceCollection services)
     services.AddIgniteUIBlazor(typeof(IgbRippleModule));
     services.AddIgniteUIBlazor(typeof(IgbNavDrawerModule));
     services.AddIgniteUIBlazor(typeof(IgbNavDrawerItemModule));
+    services.AddIgniteUIBlazor(typeof(IgbCheckboxModule));
     services.AddIgniteUIBlazor(typeof(IgbDataGridModule));
+    services.AddIgniteUIBlazor(typeof(IgbInputModule));
 }

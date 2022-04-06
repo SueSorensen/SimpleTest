@@ -28,15 +28,15 @@
     <div class="group row">
         <IgbNavDrawer Open="true" class="nav-drawer" master-view-scope>
             <div>
-                <IgbNavDrawerItem Active="false" @onclick="@(e => Navigate("/"))" class="nav-drawer-item" master-view-scope>
+                <IgbNavDrawerItem Active="false" @onclick="@(e => Navigate("/view-1"))" class="nav-drawer-item" master-view-scope>
                     <span slot="content" class="material-icons icon">home</span>
                     <span slot="content" class="span">View 1</span>
                 </IgbNavDrawerItem>
-                <IgbNavDrawerItem Active="false" @onclick="@(e => Navigate("/view-2"))" class="nav-drawer-item" master-view-scope>
+                <IgbNavDrawerItem Active="false" @onclick="@(e => Navigate("/layout"))" class="nav-drawer-item" master-view-scope>
                     <span slot="content" class="material-icons icon">dns</span>
                     <span slot="content" class="span">View 2</span>
                 </IgbNavDrawerItem>
-                <IgbNavDrawerItem Active="false" @onclick="@(e => Navigate("/view-3"))" class="nav-drawer-item" master-view-scope>
+                <IgbNavDrawerItem Active="false" @onclick="@(e => Navigate("/"))" class="nav-drawer-item" master-view-scope>
                     <span slot="content" class="material-icons icon">dashboard</span>
                     <span slot="content" class="span">View 3</span>
                 </IgbNavDrawerItem>
